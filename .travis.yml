@@ -42,5 +42,5 @@ deploy:
   on:
     branch: hexo
   repo: jonkimi/jonkimi.github.io
-  target_branch: hexo
+  target_branch: develop
   fqdn: jonkimi.com
