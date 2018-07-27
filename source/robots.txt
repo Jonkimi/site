@@ -2,3 +2,5 @@ User-agent: *
 Disallow: /css
 Disallow: /js
 Disallow: /fancybox
+Disallow: /tags
+Disallow: /archives

@@ -1,6 +1,7 @@
 ---
 title: Hexo 安装教程
-tags: [Hexo, 安装教程, GitHub Pages]
+tags: [Hexo, 安装教程]
+description : 本文是一篇简单的Hexo的安装教程
 ---
 
 ## 依赖软件
@@ -29,10 +30,6 @@ tags: [Hexo, 安装教程, GitHub Pages]
 ```shell
 $ npm install -g hexo-cli
 ```
-
-## Hexo 部署
-
-
 
 ## 参考
 
