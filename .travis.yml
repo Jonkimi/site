@@ -26,7 +26,6 @@ install:
 
 script:
   - npm run eslint
-  - npm run build
   - hexo g
 
 branches:
