@@ -11,14 +11,14 @@ cache:
     - node_modules
 
 env:
-  - CXX=g++-4.8
+#  - CXX=g++-4.8
 
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+#  apt:
+#    sources:
+#      - ubuntu-toolchain-r-test
+#    packages:
+#      - g++-4.8
   ssh_known_hosts: github.com
 
 install:
