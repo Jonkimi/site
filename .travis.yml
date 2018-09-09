@@ -27,12 +27,12 @@ install:
 before_script:
 - git config --global user.name "Jonkimi"
 - git config --global user.email "JonkimyLiao@gmail.com"
-- sed -i'' "s~git@github.com:Jonkimi/jonkimi.github.io.git~https://${GH_TOKEN}:x-oauth-basic@github.com:Jonkimi/jonkimi.github.io.git~" _config.yml
+- sed -i'' "s~git@github.com:Jonkimi/jonkimi.github.io.git~https://${GH_TOKEN}@github.com:Jonkimi/jonkimi.github.io.git~" _config.yml
 
 script:
 #  - npm run eslint
   - hexo g
-  - hexo deploy --silent
+  - hexo deploy
 
 
 branches:
