@@ -119,7 +119,7 @@ index_with_subtitle: false
 menu:
   home: / || home
   #about: /about/ || user
-  #tags: /tags/ || tags
+  tags: /tags/ || tags
   #categories: /categories/ || th
   archives: /archives/ || archive
   #schedule: /schedule/ || calendar
@@ -430,7 +430,7 @@ font:
 
 # Math Equations Render Support
 math:
-  enable: false
+  enable: true
 
   # Default(true) will load mathjax/katex script on demand
   # That is it only render those page who has 'mathjax: true' in Front Matter.
@@ -478,8 +478,8 @@ pangu: false
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: Jonkimi
   count: true
   lazyload: false
 
@@ -714,7 +714,7 @@ local_search:
 # Bookmark Support
 # Dependencies: https://github.com/theme-next/theme-next-bookmark
 bookmark:
-  enable: false
+  enable: true
   # if auto
   #   - save the reading position when closing the page
   #   - or clicking the bookmark-icon
