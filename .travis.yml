@@ -27,6 +27,8 @@ install:
 script:
 #  - npm run eslint
   - hexo g
+  - hexo deploy --silent
+
 
 branches:
   only:
