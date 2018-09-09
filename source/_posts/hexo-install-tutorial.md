@@ -45,7 +45,7 @@ git subtree add -P themes/hexo-theme-next  https://github.com/theme-next/hexo-th
 
 `_config.yml`修改`theme`配置
 
-```config
+```yml
 ...
 theme: hexo-theme-next
 ...
@@ -74,9 +74,9 @@ npm install hexo-math --save
 
 在需要渲染公式界面添加配置`mathjax: true`
 
-# 问题
+# 配置
 
-1. Cannot GET /tags/
+1. 创建标签云页
 
 先创建tag页面，然后在主题`_config.yml`的Menu中配置
 
@@ -84,12 +84,29 @@ npm install hexo-math --save
 hexo new page tags
 ```
 
+2. 设置 DISQUS
+
+注册`DISQUS`账户，创建网站[^4]，修改主题配置文件，启动`DISQUS`
+
+```yml
+...
+# Disqus
+disqus:
+  enable: true
+  shortname: your-shortname
+  count: true
+  lazyload: false
+  ...
+```
+
 # 参考
 
 [^1]: [Hexo 官方安装教程][1]
 [^2]: [Hexo 修改渲染插件][2]
 [^3]: [hexo-theme-next wiki][3]
+[^4]: [DISQUS 创建网站][4]
 
 [1]: https://hexo.io/docs/index.html    "Hexo 官方安装教程"
 [2]: https://hmgqzx.github.io/wiki/Hexo/Hexo%20%E6%8F%92%E4%BB%B6/MarkDown%20%E6%B8%B2%E6%9F%93%E6%8F%92%E4%BB%B6/	"Hexo修改渲染插件"
 [3]: https://github.com/iissnan/hexo-theme-next/wiki
+[4]: https://disqus.com/admin/create/
