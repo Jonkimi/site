@@ -24,6 +24,11 @@ addons:
 install:
   - npm install
 
+before_script:
+- git config --global user.name "Jonkimi"
+- git config --global user.email "JonkimyLiao@gmail.com"
+- sed -i "s/__GITHUB_TOKEN__/${GH_TOKEN}/" _config.yml
+
 script:
 #  - npm run eslint
   - hexo g
