@@ -1,6 +1,7 @@
 ---
 title: Cygwin 安装教程
-tags: [Cygwin, Install]
+date: 2018-09-10 18:27:40
+tags: [Cygwin, 安装]
 description: Cygwin 简易安装教程
 ---
 
