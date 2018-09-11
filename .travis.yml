@@ -25,9 +25,10 @@ install:
   - npm install
 
 before_script:
-- git config --global user.name "Jonkimi"
-- git config --global user.email "JonkimyLiao@gmail.com"
-- sed -i'' "s~git@github.com:Jonkimi/jonkimi.github.io.git~https://${GH_TOKEN}@github.com/Jonkimi/jonkimi.github.io.git~" _config.yml
+ - git config --global user.name "Jonkimi"
+ - git config --global user.email "JonkimyLiao@gmail.com"
+ - sed -i'' "s~git@github.com:Jonkimi/jonkimi.github.io.git~https://${GH_TOKEN}@github.com/Jonkimi/jonkimi.github.io.git~" _config.yml
+ - git clone -b master https://${GH_TOKEN}@github.com/Jonkimi/jonkimi.github.io.git .deploy_git
 
 script:
 #  - npm run eslint
