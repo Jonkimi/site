@@ -9,6 +9,8 @@ description: Jupyter的安装与使用
 
 > The Jupyter Notebook is an open-source web application that allows you to create and share documents that contain live code, equations, visualizations and narrative text. Uses include: data cleaning and transformation, numerical simulation, statistical modeling, data visualization, machine learning, and much more.^[1]^
 
+Jupyter Notebook 可以很方便的共享自己的成果。
+
 ## 安装
 
 ```shell
