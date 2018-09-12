@@ -5,7 +5,7 @@
 # Site
 title: Space & Time
 subtitle:
-description: My space, your time.
+description: Space & Time
 keywords:
 author: Jonkimi
 language:
@@ -13,13 +13,6 @@ language:
   - zh-TW
   - en
 timezone: Asia/Shanghai
-
-# 示例
-# Markdown-it config
-## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
-markdown:
-  render:
-    html: true
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
