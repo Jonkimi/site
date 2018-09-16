@@ -67,7 +67,7 @@ flent tcp_upload -p totals -l 90 -H 172.96.199.44 -t reno-server -o reno-server.
 
 [^1]: [Flent官网][1]
 [^2]: [Flent安装教程][2]
-[3]: [安装BBR][3]
+[^3]: [安装BBR][3]
 
 [1]: https://flent.org "Flent官网"
 [2]: https://flent.org/intro.html#installing-flent "Flent安装教程"
