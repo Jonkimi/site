@@ -6,7 +6,47 @@ description: 本文简单介绍在Linux通过配置自定义服务
 ---
 # Linux 创建自定义服务
 
-## Systemd service[^1][^2][^3]
+## Upstart Service
+
+在`/etc/init.d/`目录下新建`service-name`文件[^1]
+
+```bash
+service_name="service_name"
+service_script_path="service_script_path"
+
+start()
+{
+    echo "$service_name service start"
+    chmod a+x $service_script_path && nohup ./$service_script_path 
+}
+
+stop()
+{
+    echo "$service_name service stop"
+    server_process_id=`ps -aux | grep $service_name | cut -d " " -f 6`
+    echo "server_process_id="server_process_id
+    kill -9 $server_process_id
+}
+
+case $1 in
+start)
+    start
+    ;;
+stop)
+    stop
+    ;;
+restart)
+    echo "resert the $service_name"
+    stop
+    start
+    ;;
+*)
+    echo "undefine operation"
+    ;;
+esac
+```
+
+## Systemd service[^2]
 
 ```ini
 [Unit]
@@ -50,7 +90,7 @@ WantedBy=multi-user.target
 
 7. PrivateTmp=True 表示给服务分配独立的临时空间。
 
-   ==注意：[Service]部分的启动、重启、停止命令全部要求使用绝对路径，使用相对路径则会报错！==[^4]
+   ==注意：[Service]部分的启动、重启、停止命令全部要求使用绝对路径，使用相对路径则会报错！==[^3]
 
 ### 服务操作
 
@@ -90,58 +130,18 @@ systemctl status <service-name>
  systemctl reload <service-name>
 ```
 
-## Upstart Service
-
-在`/etc/init.d/`目录下新建`service-name`文件[^5]
-
-```bash
-service_name="service_name"
-service_script_path="service_script_path"
-
-start()
-{
-    echo "$service_name service start"
-    chmod a+x $service_script_path && nohup ./$service_script_path 
-}
-
-stop()
-{
-    echo "$service_name service stop"
-    server_process_id=`ps -aux | grep $service_name | cut -d " " -f 6`
-    echo "server_process_id="server_process_id
-    kill -9 $server_process_id
-}
-
-case $1 in
-start)
-    start
-    ;;
-stop)
-    stop
-    ;;
-restart)
-    echo "resert the $service_name"
-    stop
-    start
-    ;;
-*)
-    echo "undefine operation"
-    ;;
-esac
-```
+Systemd相对init更简单，推荐使用Systemd[^4][^5]
 
 ## 参考
 
-[^1]: [Upstart 与 Systemd][1]
-[^2]: [Systemd 替代 init][2]
-[^3]: [Systemd 鸟哥私房菜教程][4]
-[^4]: [Systemd 博客参考][5]
-[^5]: [Udstart 自定义服务模板][3]
+[^1]: [Udstart 自定义服务模板][3]
+[^2]: [Systemd 鸟哥私房菜教程][4]
+[^3]: [Systemd 博客参考][5]
+[^4]: [Upstart 与 Systemd][1]
+[^5]: [Systemd 替代 init][2]
 
-
-
-[1]: https://wiki.ubuntu.com/SystemdForUpstartUsers "Upstart 与 systemd 比较"
-[2]: https://www.tecmint.com/systemd-replaces-init-in-linux/ "systemd 替代 init"
+[1]: https://wiki.ubuntu.com/SystemdForUpstartUsers "Upstart 与 Systemd 比较"
+[2]: https://www.tecmint.com/systemd-replaces-init-in-linux/ "Systemd 替代 init"
 [3]: https://peter517.github.io/2015/08/10/Ubuntu%E4%B8%AD%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/ "Ubuntu 自定义服务模板"
 [4]: https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/150.html	" 鸟哥的 Linux 私房菜"
-[5]: https://blog.csdn.net/yuanguozhengjust/article/details/38019923 "systemd快速配置理解"
+[5]: https://blog.csdn.net/yuanguozhengjust/article/details/38019923 "Systemd快速配置理解"
