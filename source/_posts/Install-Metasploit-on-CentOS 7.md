@@ -44,14 +44,14 @@ gem install rails
 bundle install
 ```
 
-6. Init and start postgresql 
+6. Init and start postgresql
 
 ```shell
 postgresql-setup initdb
 systemctl start postgresql
 ```
 
-7. Create postgresql user and database for metasploit 
+7. Create postgresql user and database for metasploit
 
 ```shell
 sudo -u postgres -i createuser msfuser -P

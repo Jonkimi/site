@@ -17,7 +17,7 @@ service_script_path="service_script_path"
 start()
 {
     echo "$service_name service start"
-    chmod a+x $service_script_path && nohup ./$service_script_path 
+    chmod a+x $service_script_path && nohup ./$service_script_path
 }
 
 stop()
@@ -143,5 +143,5 @@ Systemd相对init更简单，推荐使用Systemd[^4][^5]
 [1]: https://wiki.ubuntu.com/SystemdForUpstartUsers "Upstart 与 Systemd 比较"
 [2]: https://www.tecmint.com/systemd-replaces-init-in-linux/ "Systemd 替代 init"
 [3]: https://peter517.github.io/2015/08/10/Ubuntu%E4%B8%AD%E8%87%AA%E5%AE%9A%E4%B9%89%E6%9C%8D%E5%8A%A1/ "Ubuntu 自定义服务模板"
-[4]: https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/150.html	" 鸟哥的 Linux 私房菜"
+[4]: https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/150.html "鸟哥的 Linux 私房菜"
 [5]: https://blog.csdn.net/yuanguozhengjust/article/details/38019923 "Systemd快速配置理解"
