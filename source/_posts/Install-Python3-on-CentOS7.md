@@ -44,5 +44,4 @@ description: 在 CentOS 7 上编译安装 Python 3
    Python 3.6.5
    ```
 
-[1]: https://www.python.org/downloads/source/	"Python 源代码下载界面"
-
+[1]: https://www.python.org/downloads/source/ "Python 源代码下载界面"
