@@ -95,7 +95,7 @@ deploy:
 * [Travis CI 配置文件选项][2]
 * [Travis CI 配置文件参考][4]
 
-[1]: https://github.com/settings/tokens	"Github Token管理界面"
+[1]: https://github.com/settings/tokens "Github Token管理界面"
 [2]: https://docs.travis-ci.com/user/deployment/pages/ "Travis CI 部署 Github Pages 官方文档"
 [3]: https://juejin.im/post/596e39916fb9a06baf2ed273 "Travis CI 配置文件"
 [4]: https://github.com/hexojs/site/blob/master/.travis.yml "Hexo website travis.yml"
