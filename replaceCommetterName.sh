@@ -22,4 +22,4 @@ export GIT_AUTHOR_EMAIL="$am"
 export GIT_COMMITTER_NAME="$cn"
 export GIT_COMMITTER_EMAIL="$cm"
 '  --tag-name-filter cat -- --branches --tags 
-# git push --force --tags origin 'refs/heads/*'
+git push --force --tags origin 'refs/heads/*'
