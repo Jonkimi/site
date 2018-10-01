@@ -108,6 +108,6 @@ disqus:
 [^4]: [DISQUS 创建网站][4]
 
 [1]: https://hexo.io/docs/index.html    "Hexo 官方安装教程"
-[2]: https://hmgqzx.github.io/wiki/Hexo/Hexo%20%E6%8F%92%E4%BB%B6/MarkDown%20%E6%B8%B2%E6%9F%93%E6%8F%92%E4%BB%B6/	"Hexo修改渲染插件"
+[2]: https://hmgqzx.github.io/wiki/Hexo/Hexo%20%E6%8F%92%E4%BB%B6/MarkDown%20%E6%B8%B2%E6%9F%93%E6%8F%92%E4%BB%B6/ "Hexo修改渲染插件"
 [3]: https://github.com/iissnan/hexo-theme-next/wiki
 [4]: https://disqus.com/admin/create/

@@ -82,11 +82,11 @@ prefix = ""
 ./dnscrypt-proxy -service start
 ```
 
-修改`resolv.conf`配置
+修改系统 DNS 地址
 
 ## 在 Winwos 上加密 DNS
 
-下载 [Simple DNSCrypt][3] 安装即可。
+下载 [Simple DNSCrypt][3] 安装后修改系统 DNS 地址。
 
 [1]: https://github.com/jedisct1/dnscrypt-proxy
 [2]: https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_x86_64-2.0.16.tar.gz "2.0.16 版本包"
