@@ -2,7 +2,7 @@
 title: 加密 DNS
 date: 2018-10-01 15:05:21
 tags: [dnscrypt, Linux, Windows]
-discription: 安装 dnscrypt-proxy 加密 DNS 请求
+description: 安装 dnscrypt-proxy 加密 DNS 请求
 ---
 
 # 加密 DNS
