@@ -2,7 +2,7 @@
 title: 测试Reno,Cubic和BBR三种TCP阻塞控制协议的性能
 date: 2018-06-28 11:06:48
 tags: [TCP阻塞控制协议, BBR, Cubic, Reno]
-description: 在CentOS 7 上使用flent测试Reno,Cubic和BBR三种TCP阻塞控制协议的性能
+description: 在CentOS 7 上使用flent测试Reno,Cubic和BBR三种TCP阻塞控制协议的性能。
 ---
 
 #### 测试环境

@@ -2,7 +2,7 @@
 title: 申请Letsencrypt免费HTTPS证书
 date: 2018-07-28 13:57:23
 tags: [Letsencrypt, 免费HTTPS证书, acme]
-description: 使用acme给阿里云(aliyun)或namesilo网站申请免费HTTPS证书
+description: 使用开源工具 acme 给阿里云(aliyun)或 namesilo 的域名自动申请免费Letsencrypt 证书
 ---
 
 ## 安装acme
@@ -27,6 +27,14 @@ curl  https://get.acme.sh | sh
     export LEXICON_NAMESILO_TOKEN="namesilo-api-token"
     acme.sh --issue  -d test.acme.sh  --dns dns_lexicon  --dnssleep 960
     ./acme.sh --issue --dns dns_lexicon -d example.com -d *.example.com --dnssleep 960
+    ```
+3. 自动申请
+
+    添加周期任务
+    ```shell
+    $ crontab -e
+    # 添加已下配置
+    21 0 * * * "/root/.acme.sh"/acme.sh  --cron --home "/root/.acme.sh" > /root/.acme.sh/run.log
     ```
 
 ## 问题

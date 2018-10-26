@@ -2,7 +2,7 @@
 title: CentOS 7安装 Metasploit
 date: 2018-05-16 18:27:40
 tags: [CentOS, Metasploit]
-description: 在 CentOS 7 上安装 Metasploit
+description: 本文简单介绍了在 CentOS 7 上使用 Metasploit 的源代码进行安装与配置
 ---
 <!-- ## Install metasploit on CentOS 7 -->
 

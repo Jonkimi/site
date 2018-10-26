@@ -2,7 +2,7 @@
 title: CentOS 7 源代码编译安装 Python 3
 date: 2018-09-22 17:10:15
 tags: [CentOS, Python 3, Install, 安装]
-description: 在 CentOS 7 上编译安装 Python 3
+description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以及 修改系统 Pyhton 默认版本
 ---
 
 # CentOS 7 安装 Python 3

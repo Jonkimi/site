@@ -2,7 +2,7 @@
 title: Cygwin 安装教程
 date: 2018-09-10 18:27:40
 tags: [Cygwin, 安装]
-description: Cygwin 简易安装教程
+description: 本文介绍 Cygwin 的安装、镜像配置以及 Cygwin 包管理器 apt-cyg 的安装
 ---
 
 ## Website

@@ -2,7 +2,7 @@
 title: Hexo 安装教程
 date: 2018-09-09 18:27:40
 tags: [Hexo, 安装教程]
-description: 本文是一篇简单的Hexo的安装教程，包括安装`hexo-renderer-markdown-it-plus`渲染插件支持注脚与上下标，安装`hexo-math`插件支持`mathjax`显示数学公式，以及安装评论系统DISQUS。
+description: 本文是一篇简单的Hexo的安装教程，包括安装`hexo-renderer-markdown-it-plus`渲染插件支持注脚与上下标，安装`hexo-math`插件支持`mathjax`显示数学公式，以及安装评论系统DISQUS
 ---
 
 # 依赖软件

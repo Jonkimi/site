@@ -2,7 +2,7 @@
 title: Linux 创建自定义服务
 date: 2018-09-16 23:32:00
 tags: [Linux, 自定义服务, Systemd, init]
-description: 本文简单介绍在Linux通过配置自定义服务
+description: 本文简单介绍在Linux 下如何通过 Upstart Service 与 Systemd service 配置自定义服务。
 ---
 # Linux 创建自定义服务
 
