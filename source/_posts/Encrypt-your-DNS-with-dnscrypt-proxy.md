@@ -84,6 +84,13 @@ prefix = ""
 
 修改系统 DNS 地址
 
+测试
+
+```shell
+yum install bind-utils
+dig @127.0.0.1 www.google.com
+```
+
 ## 在 Winwos 上加密 DNS
 
 下载 [Simple DNSCrypt][3] 安装后修改系统 DNS 地址。

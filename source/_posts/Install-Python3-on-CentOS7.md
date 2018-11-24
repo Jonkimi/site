@@ -21,6 +21,11 @@ description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以�
    yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
    ./configure --prefix=/usr/local/python3 --enable-optimizations
    ```
+   
+    安装编译套件
+    ```shell
+    yum groupinstall "Development tools"
+    ```
 
 3. 安装
 
@@ -33,7 +38,7 @@ description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以�
 4. 更改默认版本配置
 
    ```shell
-   update-alternatives --install /usr/bin/python python /usr/bin/python3 2
+   update-alternatives --install /usr/bin/python python /usr/local/python3/bin/python3 2
    update-alternatives --config python
    ```
 
@@ -43,5 +48,6 @@ description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以�
    $ python3 -V
    Python 3.6.5
    ```
+6. 添加环境变量 
 
 [1]: https://www.python.org/downloads/source/ "Python 源代码下载界面"
