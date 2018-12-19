@@ -14,7 +14,7 @@ description: 在 CentOS 上基于`micropython`安装`py-kms`搭建KMS服务
 
 参考`README.md`里关于`The Unix version`的内容
 
-1. 下载`v1.9.3`代码
+1. 下载最新`tag`代码
 
 ```shell
 git clone https://github.com/micropython/micropython.git
@@ -26,6 +26,7 @@ git checkout -b tag-1.9.3 v1.9.3
 2. 安装额外依赖
 
 ```shell
+yum groupinstall "Development tools"
 yum install libffi-devel
 ```
 
@@ -72,5 +73,16 @@ python server.py
 3. 测试
 
 ```shell
-python client.py 0.0.0.0 3688
+python client.py 0.0.0.0 1688
 ```
+
+## 问题定位
+
+```shell
+$ micropython -m upip install -r requirements-micropython.txt
+Installing to: /root/.micropython/lib/
+Warning: pypi.python.org SSL certificate is not validated
+Error installing 'micropython-argparse': Package not found, packages may be partially installed
+```
+
+解决：更新到v1.9.4
