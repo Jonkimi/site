@@ -82,11 +82,45 @@ prefix = ""
 ./dnscrypt-proxy -service start
 ```
 
-修改系统 DNS 地址
+自定义服务
+
+`/etc/systemd/system/dnscrypt-proxy.service`
+
+
+```ini
+[Unit]
+Description=Encrypted/authenticated DNS proxy
+ConditionFileIsExecutable=/opt/dnscrypt-proxy/dnscrypt-proxy
+
+[Service]
+StartLimitInterval=5
+StartLimitBurst=10
+ExecStart=/opt/dnscrypt-proxy/dnscrypt-proxy
+
+WorkingDirectory=/opt/dnscrypt-proxy
+
+
+
+
+Restart=always
+RestartSec=120
+EnvironmentFile=-/etc/sysconfig/dnscrypt-proxy
+
+[Install]
+WantedBy=multi-user.target
+```
+
+关闭系统分配DNS
+
+```shell
+systemctl disable NetworkManager.service
+```
+
+修改系统 DNS 地址 /etc/resolv.conf
 
 测试
 
-```shell
+```bash
 yum install bind-utils
 dig @127.0.0.1 www.google.com
 ```
