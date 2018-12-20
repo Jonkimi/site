@@ -50,20 +50,20 @@ description: 使用Chevereto搭建HTTPS图床
     ```ini
     # Disable server signature
     ServerSignature Off
-
+    
     # Disable directory listing (-indexes), Multiviews (-MultiViews) and enable Follow system links (+FollowSymLinks)
     Options -Indexes
     Options -MultiViews
     Options +FollowSymLinks
     php_value upload_max_filesize 90M
     <IfModule mod_rewrite.c>
-
+    
         RewriteEngine On
         # If you have problems with the rewrite rules remove the "#" from the following RewriteBase line
         # You will also have to change the path to reflect the path to your Chevereto installation
         # If you are using alias is most likely that you will need this.
         RewriteBase /
-
+    
         # 404 images
         # If you want to have your own fancy "image not found" image remove the "#" from RewriteCond and RewriteRule lines
         # Make sure to apply the correct paths to reflect your current installation
@@ -77,6 +77,31 @@ description: 使用Chevereto搭建HTTPS图床
         RewriteCond %{HTTPS} off
         RewriteRule (.*) https://%{SERVER_NAME}/$1 [R,L]
     </IfModule>
+    ```
+
+4. 修改文件上传大小上限
+
+    /etc/nginx/nginx.conf
+
+    ```ini
+    ...
+    http
+    {
+        ...
+        client_max_body_size 40m;
+        ...
+    }
+    ...
+    ```
+
+
+
+    /etc/php.ini
+
+    ```ini
+    memory_limit = 32M
+    upload_max_filesize = 24M
+    post_max_size = 32M
     ```
 
 ## 安装问题
@@ -105,6 +130,15 @@ description: 使用Chevereto搭建HTTPS图床
 4. The requested URL /install was not found on this server
 
 5. sysctl: cannot stat /proc/sys/status: No such file or directory
+
+6. G\: Sessions are not working on this server due to missing write permission on session save path (php.ini session.save_path).
+
+    实际session目录配置为`/etc/php-fpm.d/www.conf`下的
+    ```ini
+    php_value[session.save_path] = /var/lib/php/session
+    ```
+    修改该目录权限为同配置下的`user`与`group`
+
 
 ## 参考
 
