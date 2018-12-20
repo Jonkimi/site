@@ -13,7 +13,7 @@ mathjax: true
 | 最小一乘 | 最小二乘 |
 | $ S=\\sum_{x=0}^n  \mid y_i - f(x_i) \mid $ | $ S=\\sum_{x=0}^n ( y_i - f(x_i))^2 $ |
 
-![copmarision](http://www.chioka.in/wp-content/uploads/2013/12/L1-vs-L2-properties1.png)
+[![L1-vs-L2-properties1.png](https://image.jonkimi.com/images/2018/09/12/L1-vs-L2-properties1.png)](https://image.jonkimi.com/image/YyM)
 
 # 参考
 
