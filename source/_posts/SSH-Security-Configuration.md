@@ -1,12 +1,13 @@
 ---
 title: SSH-Security-Configuration
 date: 2018-12-18 23:30:39
-tags: [SSH, 安全]
+tags: [SSH, Security, 安全]
+description: 提高`SSH`安全性
 ---
 
 # SSH安全
 
-修改SSH服务配置文件`/etc/ssh/sshd_config`提高SSH安全性[^1][^2]
+修改SSH服务配置文件`/etc/ssh/sshd_config`提高SSH安全性[^1]
 
 1. 关闭密码登录
 
@@ -17,6 +18,12 @@ tags: [SSH, 安全]
 #PasswordAuthentication yes
 #PermitEmptyPasswords no
 PasswordAuthentication no
+```
+
+复制公开密钥到远程服务器[^2]
+
+```shell
+ssh-copy-id -i /path/to/public-key-file user@host
 ```
 
 2. 使用安全算法
@@ -31,6 +38,14 @@ HostKeyAlgorithms ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ss
 KexAlgorithms ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256
 
 MACs hmac-sha2-256,hmac-sha2-512
+```
+
+3. 使用安全性更好的密钥生成算法[^2]
+
+使用`ed25519`或者`RSA 4096`
+
+```shell
+ssh-keygen -t key_type -b bits -C "comment"
 ```
 
 3. 禁止Root远程登录
