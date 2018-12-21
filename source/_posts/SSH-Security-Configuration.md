@@ -2,7 +2,7 @@
 title: SSH-Security-Configuration
 date: 2018-12-18 23:30:39
 tags: [SSH, Security, 安全]
-description: 提高`SSH`安全性
+description: 提高SSH安全性
 ---
 
 # SSH安全
