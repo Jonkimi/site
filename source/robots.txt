@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /tags/index.html
 Allow: /404.html
-Disallow: /css
-Disallow: /js
+#Disallow: /css
+#Disallow: /js
 Disallow: /fancybox
 Disallow: /tags
 Disallow: /archives
