@@ -5,7 +5,7 @@ tags: [CentOS, Python 3, Install, 安装]
 description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以及 修改系统 Pyhton 默认版本
 ---
 
-# CentOS 7 安装 Python 3
+CentOS 7 安装 Python 3
 
 1. 下载源码
 
@@ -21,8 +21,9 @@ description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以�
    yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel
    ./configure --prefix=/usr/local/python3 --enable-optimizations
    ```
-   
+
     安装编译套件
+
     ```shell
     yum groupinstall "Development tools"
     ```
@@ -48,6 +49,5 @@ description: 本文简单介绍如何在 CentOS 7 上编译安装 Python 3 以�
    $ python3 -V
    Python 3.6.5
    ```
-6. 添加环境变量 
 
-[1]: https://www.python.org/downloads/source/ "Python 源代码下载界面"
+[^1]: https://www.python.org/downloads/source/
