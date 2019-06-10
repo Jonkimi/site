@@ -2,6 +2,7 @@
 title: Install-Gitlab-Runner-with-Docker
 date: 2019-05-09 11:01:28
 tags: [Gitlab, Runner, CI, Docker, Cache Server]
+description: 安装 Gitlab-Runner，配置 Docker 与 Cache Server
 ---
 
 ## Gitlab-Runner 安装

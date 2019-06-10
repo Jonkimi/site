@@ -2,6 +2,7 @@
 title: Install-LEMP-on-CentOS7
 date: 2018-12-18 23:43:51
 tags: [Nginx, PHP, LEMP, CentOS, 转载]
+description: 记录 LEMP 安装
 ---
 
 1. [CentOS 7 安装LEMP][1]

@@ -2,6 +2,7 @@
 title: Unity3D-DevOps-with-Gitlab-CI
 date: 2019-05-09 11:12:32
 tags: [Unity, Unity3D, CI ,GitLab]
+description: Unity 配置 GitLab CI
 ---
 
 ## Gitlab-Runner
