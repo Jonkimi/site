@@ -6,7 +6,7 @@ description: 本文简单介绍了在 CentOS 7 上使用 Metasploit 的源代码
 ---
 <!-- ## Install metasploit on CentOS 7 -->
 
-# Steps
+## Steps
 
 1. Get source code, Enter into code directory
 

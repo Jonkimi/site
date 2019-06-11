@@ -5,7 +5,7 @@ tags: [SSH, Security, 安全]
 description: 提高 SSH 安全性
 ---
 
-# SSH 安全
+## SSH 安全
 
 修改 SSH 服务配置文件`/etc/ssh/sshd_config`提高SSH安全性[^1]
 
