@@ -1,5 +1,5 @@
 ---
-title: 非sudoer用户安装python包
+title: 非 sudoer 用户安装 python 包
 date: 2018-09-15 18:27:40
 tags: [Python Environment]
 description: Linux环境下无 root 权限或非 sudoer 用户如何成功安装 python 包
