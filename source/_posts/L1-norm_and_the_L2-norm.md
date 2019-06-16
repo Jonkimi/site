@@ -11,7 +11,7 @@ mathjax: true
 | Least Absolute Deviations | Least Squares |
 | :---: | :---: |
 | 最小一乘 | 最小二乘 |
-| $ S=\\sum_{x=0}^n  \mid y_i - f(x_i) \mid $ | $ S=\\sum_{x=0}^n ( y_i - f(x_i))^2 $ |
+| $S=\\sum_{x=0}^n  \mid y_i - f(x_i) \mid$ | $S=\\sum_{x=0}^n ( y_i - f(x_i))^2$ |
 
 [![L1-vs-L2-properties1.png](https://image.jonkimi.com/images/2018/09/12/L1-vs-L2-properties1.png)](https://image.jonkimi.com/image/YyM)
 
