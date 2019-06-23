@@ -121,7 +121,7 @@ $$
 \begin{aligned}\left\|\boldsymbol{w}_{t+1}\right\|^{2} &=\left\|\boldsymbol{w}_{t}+y_{n(t)} \boldsymbol{x}_{n(t)}\right\|^{2} \\ &=\left\|\boldsymbol{w}_{t}\right\|^{2}+2 y_{n(t)} \boldsymbol{w}_{t}^{T} \boldsymbol{x}_{n(t)}+\left\|y_{n(t)} \boldsymbol{x}_{n(t)}\right\|^{2} \\ & \leq\left\|\boldsymbol{w}_{t}\right\|^{2}+0+\left\|y_{n(t)} \boldsymbol{x}_{n(t)}\right\|^{2} \\ & \leq\left\|\boldsymbol{w}_{t}\right\|^{2}+\max _{n}\left\|y_{n} \boldsymbol{x}_{n}\right\|^{2} \end{aligned}
 $$
 
-start from $\boldsymbol{w}_0 = \boldsymbol{0} $, after T mistake corrections,
+start from $\boldsymbol{w}_0 = \boldsymbol{0}$, after T mistake corrections,
 
 $$
 \frac{\boldsymbol{w}_{f}^{T}}{\left\|\boldsymbol{w}_{f}\right\|} \frac{\boldsymbol{w}_{T}}{\left\|\boldsymbol{w}_{T}\right\|} \geq \sqrt{T} \cdot \text { constant }
