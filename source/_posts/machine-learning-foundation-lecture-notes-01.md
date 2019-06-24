@@ -124,7 +124,7 @@ $$
 start from $\boldsymbol{w}_0 = \boldsymbol{0}$, after T mistake corrections,
 
 $$
-\begin{aligned} \frac{\boldsymbol{w}_{f}^{T}}{\left\|\boldsymbol{w}_{f}\right\|} \frac{\boldsymbol{w}_{T}}{\left\|\boldsymbol{w}_{T}\right\|} & \geq \frac{T \cdot \min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n(t)}}{\left\|\boldsymbol{w}_{f}\right\| \left\|\boldsymbol{w}_{T}\right\|} \\ & \geq  \frac{T \cdot \min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n(t)}}{\left\|\boldsymbol{w}_{f}\right\| \cdot \sqrt{T} \cdot \max _{n} \left\|\boldsymbol{x}_{n}\right\|}  \\ & \geq \sqrt{T} \cdot \frac{ \min _{n} \boldsymbol{x}_{n(t)} }{\max _{n} \left\|\boldsymbol{x}_{n}\right\|}   \\ & \geq \sqrt{T} \cdot \text { constant } \end{aligned}
+\begin{aligned} \frac{\boldsymbol{w}_{f}^{T}}{\left\|\boldsymbol{w}_{f}\right\|} \frac{\boldsymbol{w}_{T}}{\left\|\boldsymbol{w}_{T}\right\|} & \geq \frac{T \cdot \min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n}}{\left\|\boldsymbol{w}_{f}\right\| \left\|\boldsymbol{w}_{T}\right\|} \\ & \geq  \frac{T \cdot \min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n}}{\left\|\boldsymbol{w}_{f}\right\| \cdot \sqrt{T} \cdot \max _{n} \left\|\boldsymbol{x}_{n}\right\|}  \\ & \geq     \sqrt{T} \cdot  \frac{\min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n}}{\left\|\boldsymbol{w}_{f}\right\| \cdot \max _{n} \left\|\boldsymbol{x}_{n}\right\|} \\ & \geq \sqrt{T} \cdot \text { constant } \end{aligned}
 $$
 
 
