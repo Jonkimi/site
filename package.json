@@ -27,7 +27,7 @@
     "hexo-server": "^0.3.3"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.1",
     "eslint-config-hexo": "^3.0.0"
   }
 }
