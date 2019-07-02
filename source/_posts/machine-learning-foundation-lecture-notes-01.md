@@ -82,7 +82,7 @@ Select ${g}$ from $\mathcal{H}$
 
 Perceptron Learning Algorithm
 
-For t=0, 1,…
+![image-20190628194835811](/Users/jonkimi/Workspace/03-code/00-opensource/blog/source/_posts/assets/image-20190628194835811.png)
 
 
 $$
@@ -127,4 +127,17 @@ $$
 \begin{aligned} \frac{\boldsymbol{w}_{f}^{T}}{\left\|\boldsymbol{w}_{f}\right\|} \frac{\boldsymbol{w}_{T}}{\left\|\boldsymbol{w}_{T}\right\|} & \geq \frac{T \cdot \min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n}}{\left\|\boldsymbol{w}_{f}\right\| \left\|\boldsymbol{w}_{T}\right\|} \\ & \geq  \frac{T \cdot \min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n}}{\left\|\boldsymbol{w}_{f}\right\| \cdot \sqrt{T} \cdot \max _{n} \left\|\boldsymbol{x}_{n}\right\|}  \\ & \geq     \sqrt{T} \cdot  \frac{\min _{n} y_{n} \boldsymbol{w}_{f}^{T} \boldsymbol{x}_{n}}{\left\|\boldsymbol{w}_{f}\right\| \cdot \max _{n} \left\|\boldsymbol{x}_{n}\right\|} \\ & \geq \sqrt{T} \cdot \text { constant } \end{aligned}
 $$
 
+Pros:
 
+* simple to implement, fast, works in any dimension d
+
+Cons:
+
+* Assumes linear separable
+* not fully sure how long halting takes
+
+Learning with Noisy Data 
+
+**Pocket Algorithm**
+
+![image-20190628194716741](/Users/jonkimi/Workspace/03-code/00-opensource/blog/source/_posts/assets/image-20190628194716741.png)
