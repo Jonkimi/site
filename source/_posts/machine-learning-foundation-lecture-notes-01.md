@@ -82,7 +82,7 @@ Select ${g}$ from $\mathcal{H}$
 
 Perceptron Learning Algorithm
 
-![image-20190628194835811](/Users/jonkimi/Workspace/03-code/00-opensource/blog/source/_posts/assets/image-20190628194835811.png)
+![image-20190628194835811](assets/image-20190628194835811.png)
 
 
 $$
@@ -140,4 +140,4 @@ Learning with Noisy Data
 
 **Pocket Algorithm**
 
-![image-20190628194716741](/Users/jonkimi/Workspace/03-code/00-opensource/blog/source/_posts/assets/image-20190628194716741.png)
+![image-20190628194716741](assets/image-20190628194716741.png)
