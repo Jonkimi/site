@@ -125,10 +125,68 @@ yum install bind-utils
 dig @127.0.0.1 www.google.com
 ```
 
+DoH
+
+```shell
+git clone https://github.com/m13253/dns-over-https.git
+cd dns-over-https/
+make && make install
+cat << EOM > /etc/dns-over-https/doh-server.conf listen = [
+    "127.0.0.1:8053",
+    "[::1]:8053",
+  ]
+  cert = ""
+  key = ""
+  path = "/dns-query"
+  upstream = [
+      "127.0.0.1:53"
+  ]
+  timeout = 10
+  tries = 3
+  tcp_only = false
+  verbose = false
+  log_guessed_client_ip = false
+  EOM
+
+cat << EOM > /etc/nginx/conf.d/doh.conf
+  upstream dns-backend {
+      server 127.0.0.1:8053;
+      keepalive 30;
+  }
+  server {
+          listen 80
+          server_name dns.bentasker.co.uk;
+          root /tmp/NOEXIST;
+          location /dns-query {
+                  limit_req zone=doh_limit burst=50 nodelay;
+                  proxy_set_header X-Real-IP \$remote_addr;
+                  proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+                  proxy_set_header Host \$http_host;
+                  proxy_set_header X-NginX-Proxy true;
+                  proxy_http_version 1.1;
+                  proxy_set_header Upgrade \$http_upgrade;
+                  proxy_set_header Connection "";
+                  proxy_redirect off;
+                  proxy_set_header        X-Forwarded-Proto \$scheme;
+                  proxy_read_timeout 86400;
+                  proxy_pass http://dns-backend/dns-query;
+          }
+          location / {
+              return 404;
+          }
+  
+  
+  }
+  EOM  
+```
+
+
+
 ## 在 Winwos 上加密 DNS
 
 下载 [Simple DNSCrypt][3] 安装后修改系统 DNS 地址。
 
-[1]: https://github.com/jedisct1/dnscrypt-proxy
+[1]: https://github.com/jedisct1/dnscrypt-proxy "Dnscrypt-proxy"
 [2]: https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_x86_64-2.0.16.tar.gz "2.0.16 版本包"
 [3]: https://simplednscrypt.org/ "Simple DNSCrypt 官网"
+[4]: https://www.bentasker.co.uk/documentation/linux/407-building-and-running-your-own-dns-over-https-server "DoH 配置"

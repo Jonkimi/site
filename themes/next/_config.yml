@@ -142,7 +142,7 @@ menu_settings:
 
 sidebar:
   # Sidebar Position.
-  position: left
+  position: true
   #position: right
 
   # Manual define the sidebar width. If commented, will be default for:

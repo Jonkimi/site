@@ -71,7 +71,7 @@ $$
 label $y$: +1 or -1
 
 $$
-\text { perceptrons } \Leftrightarrow \text { linear (binary) classifiers } 
+\text { perceptrons } \Leftrightarrow \text { linear (binary) classifiers }
 $$
 
 Select ${g}$ from $\mathcal{H}$  
@@ -80,10 +80,9 @@ Select ${g}$ from $\mathcal{H}$
 - difficult: $\mathcal{H}$ is of infonite size
 - idea: start from some $g_{0}$
 
-Perceptron Learning Algorithm
+**Perceptron Learning Algorithm**
 
-![image-20190628194835811](assets/image-20190628194835811.png)
-
+![image-20190628194835811.png](machine-learning-foundation-lecture-notes-01/image-20190628194835811.png)
 
 $$
 \operatorname{sign}\left(\mathbf{w}_{t}^{T} \boldsymbol{x}_{n(t)}\right) \neq y_{n(t)}
@@ -140,4 +139,4 @@ Learning with Noisy Data
 
 **Pocket Algorithm**
 
-![image-20190628194716741](assets/image-20190628194716741.png)
+![image-20190628194716741](machine-learning-foundation-lecture-notes-01/image-20190628194716741.png)

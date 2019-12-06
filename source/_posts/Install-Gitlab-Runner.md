@@ -2,7 +2,7 @@
 title: Install-Gitlab-Runner-with-Docker
 date: 2019-05-09 11:01:28
 tags: [Gitlab, Runner, CI, Docker, Cache Server]
-description: 安装 Gitlab-Runner，配置 Docker 与 Cache Server
+description: Ubuntu 安装 Gitlab-Runner，配置 Docker 与 Cache Server
 ---
 
 ## Gitlab-Runner 安装
@@ -46,7 +46,7 @@ sudo gitlab-runner register
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common -y
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
 sudo apt-cache policy docker-ce
 sudo apt install docker-ce -y
