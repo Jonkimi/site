@@ -1,8 +1,8 @@
 ---
-title: GitLab server recovery record
+title: GitLab 服务维护
 date: 2019-11-05 11:46:33
 tags: [GitLab]
-description: GitLab server recovery record
+description: GitLab 服务维护记录
 ---
 
 # GitLab 服务恢复过程回顾
