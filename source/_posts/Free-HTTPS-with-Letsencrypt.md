@@ -47,6 +47,12 @@ curl  https://get.acme.sh | sh
     # 添加已下配置
     21 0 * * * "/root/.acme.sh"/acme.sh  --cron --home "/root/.acme.sh" > /root/.acme.sh/run.log
     ```
+## CAA Record
+
+域名解析添加 CAA 记录 
+```
+0 issuewild "letsencrypt.org"
+```
 
 ## 问题
 

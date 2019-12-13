@@ -53,7 +53,7 @@ ssh-keygen -t key_type -b bits -C "comment"
 修改`PermitRootLogin`
 
 ```conf
-PermitRootLogin yes
+PermitRootLogin No
 ```
 
 ## 更换端口
