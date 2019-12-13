@@ -93,16 +93,46 @@ description: 使用Chevereto搭建HTTPS图床
     }
     ...
     ```
-
-
-
     /etc/php.ini
-
+    
     ```ini
     memory_limit = 32M
     upload_max_filesize = 24M
     post_max_size = 32M
     ```
+    
+5. API Key与用户对应
+
+    Chevereto 默认仅有 一个 API Key，通过该 Key  上传的图片不属于指定用户，通过以下修改可实现对应关系：
+
+    复制`app/routes/route.api.php`到``app/routes/overrides`下
+
+    ```shell  
+    cp app/routes/route.api.php route.api-jonkimi.php
+    ```
+
+	修改`route.api-jonkimi.php`
+
+    ```shell
+    $ diff route.api-jonkimi.php ../route.api.php
+    37,39c37,38
+    <               if(!G\timing_safe_compare('your-api-key', $_REQUEST['key'])) {
+    <                       throw new Exception(" Invalid API-J v1 key.", 100);
+    <                       //throw new Exception($_REQUEST['key'], 100);
+    ---
+    >               if(!G\timing_safe_compare(CHV\getSetting('api_v1_key'), $_REQUEST['key'])) {
+    >                       throw new Exception("Invalid API v1 key.", 100);
+    106,107c105
+    <               $uploaded_id = CHV\Image::uploadToWebsite($source, 'jonkimi');
+    <               //$uploaded_id = CHV\Image::uploadToWebsite($source);
+    ---
+    >               $uploaded_id = CHV\Image::uploadToWebsite($source);
+    153c151
+    < };
+    ---
+    > };
+    ```
+
 
 ## 安装问题
 
