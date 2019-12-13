@@ -69,8 +69,6 @@ curl  https://get.acme.sh | sh
 
 ## 参考
 
-https://github.com/Neilpang/acme.sh
-
-https://github.com/Neilpang/acme.sh/wiki/How-to-use-lexicon-dns-api
-
-https://www.tecmint.com/redirect-http-to-https-on-apache/
+[^1]: https://github.com/Neilpang/acme.sh
+[^2]: https://github.com/Neilpang/acme.sh/wiki/How-to-use-lexicon-dns-api
+[^3]: https://www.tecmint.com/redirect-http-to-https-on-apache/

@@ -156,4 +156,6 @@ stop_review:
 
 ```
 
-[1]: https://gitlab.com/gableroux/unity3d-gitlab-ci-example
+## Reference
+
+[^1]: https://gitlab.com/gableroux/unity3d-gitlab-ci-example

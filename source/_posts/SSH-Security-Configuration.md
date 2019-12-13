@@ -40,9 +40,9 @@ KexAlgorithms ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-he
 MACs hmac-sha2-256,hmac-sha2-512
 ```
 
-## 使用安全性更好的密钥生成算法[^2]
+## 使用安全性更好的密钥生成算法
 
-使用`ed25519`或者`RSA 4096`
+使用`ed25519`或者`RSA 4096`[^2]
 
 ```shell
 ssh-keygen -t key_type -b bits -C "comment"
@@ -63,6 +63,8 @@ PermitRootLogin No
 ```conf
 Port 1122
 ```
+
+## 参考
 
 [^1]: https://www.ssh.com/ssh/sshd_config/
 [^2]: https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html
