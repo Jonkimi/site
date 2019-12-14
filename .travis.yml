@@ -3,51 +3,33 @@ language: node_js
 sudo: false
 
 node_js:
-  - "node"
+  - 10
 
-cache:
-  apt: true
-  directories:
-    - node_modules
-
-env:
-#  - CXX=g++-4.8
-
-addons:
-#  apt:
-#    sources:
-#      - ubuntu-toolchain-r-test
-#    packages:
-#      - g++-4.8
-  ssh_known_hosts: github.com
-
-install:
-  - npm install
-
-before_script:
- - git config --global user.name "Jonkimi"
- - git config --global user.email "JonkimyLiao@gmail.com"
- - sed -i'' "s~git@github.com:Jonkimi/jonkimi.github.io.git~https://${GH_TOKEN}@github.com/Jonkimi/jonkimi.github.io.git~" _config.yml
- - git clone -b master https://github.com/Jonkimi/jonkimi.github.io.git .deploy_git
-
-script:
-#  - npm run eslint
-  - hexo g
-  - hexo deploy --silent
+cache: npm
 
 
 branches:
   only:
     - hexo
 
+addons:
+  ssh_known_hosts: github.com
+
+before_script:
+ - git config --global user.name "Jonkimi"
+ - git config --global user.email "JonkimyLiao@gmail.com"
+ - git clone -b master https://github.com/Jonkimi/jonkimi.github.io.git .deploy_git
+
+script:
+  - hexo generate
+
 deploy:
   provider: pages
   skip_cleanup: true
-  keep-history: true
+  keep_history: true
   local_dir: public
   github_token: $GH_TOKEN # Set in travis-ci.org dashboard
   on:
     branch: hexo
   repo: jonkimi/jonkimi.github.io
   target_branch: develop
-  fqdn: jonkimi.com
