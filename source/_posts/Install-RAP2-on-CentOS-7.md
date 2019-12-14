@@ -13,7 +13,7 @@ description: CentOS 7 部署 RAP2
 
 ## 配置
 
-1. 创建数据库[^1]
+1. 创建数据库
 
 ```shell
 mysql -e 'CREATE DATABASE IF NOT EXISTS RAP2_DELOS_APP DEFAULT CHARSET utf8 COLLATE utf8_general_ci';
@@ -112,8 +112,6 @@ mysql -e 'CREATE DATABASE IF NOT EXISTS RAP2_DELOS_APP DEFAULT CHARSET utf8 COLL
 
 ## 参考
 
-[^1]: https://github.com/thx/rap2-delos/issues/119
-
-[1]: https://github.com/thx/rap2-delos "RAP2 ReadMe"
-
-[2]: https://github.com/jawil/blog/issues/7 "Node进程管理器PM2使用"
+- https://github.com/thx/rap2-delos/issues/119
+- https://github.com/thx/rap2-delos
+- https://github.com/jawil/blog/issues/7

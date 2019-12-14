@@ -172,8 +172,11 @@ description: 使用Chevereto搭建HTTPS图床
 
 ## 参考
 
-[^1]: https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04
-[^2]: https://www.digitalocean.com/community/questions/installing-the-gd-image-library
-[^3]: https://hub.docker.com/r/furiousgeorge/chevereto/
-[^4]: https://www.howtoforge.com/tutorial/ubuntu-chevereto-image-hosting/
-[^5]: https://www.tecmint.com/redirect-http-to-https-on-apache/
+- https://www.digitalocean.com/community/tutorials/how-to-set-up-mod_rewrite-for-apache-on-ubuntu-14-04
+- https://www.digitalocean.com/community/questions/installing-the-gd-image-library
+- https://hub.docker.com/r/furiousgeorge/chevereto/
+- https://www.howtoforge.com/tutorial/ubuntu-chevereto-image-hosting/
+- https://www.tecmint.com/redirect-http-to-https-on-apache/
+
+
+

@@ -96,6 +96,6 @@ systemctl restart postgresql.service
 
 ## Reference
 
-[^1]: https://gist.github.com/oogali/bc8ff245894c696c4dfa
-[^2]: http://www.hi-roy.com/2015/12/28/centos7%E5%AE%89%E8%A3%85Metasploit%E6%A1%86%E6%9E%B6
-[^3]: https://blog.csdn.net/nixawk/article/details/44724755
+- https://gist.github.com/oogali/bc8ff245894c696c4dfa
+- http://www.hi-roy.com/2015/12/28/centos7%E5%AE%89%E8%A3%85Metasploit%E6%A1%86%E6%9E%B6
+- https://blog.csdn.net/nixawk/article/details/44724755

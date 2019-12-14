@@ -5,8 +5,6 @@ tags: [dnscrypt, Linux, Windows]
 description: 安装 dnscrypt-proxy 加密 DNS 请求
 ---
 
-# 加密 DNS
-
 [dnscrypt-proxy][1] 是一款灵活的 、拥有加密协议的 DNS 代理软件，可以实现 DNS 流量的加密与验证。
 
 ## 在 Linux 加密 DNS
@@ -186,7 +184,10 @@ cat << EOM > /etc/nginx/conf.d/doh.conf
 
 下载 [Simple DNSCrypt][3] 安装后修改系统 DNS 地址。
 
-[1]: https://github.com/jedisct1/dnscrypt-proxy "Dnscrypt-proxy"
-[2]: https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_x86_64-2.0.16.tar.gz "2.0.16 版本包"
-[3]: https://simplednscrypt.org/ "Simple DNSCrypt 官网"
-[4]: https://www.bentasker.co.uk/documentation/linux/407-building-and-running-your-own-dns-over-https-server "DoH 配置"
+
+## 参考
+
+- https://github.com/jedisct1/dnscrypt-proxy
+- https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_x86_64-2.0.16.tar.gz
+- https://simplednscrypt.org/
+- https://www.bentasker.co.uk/documentation/linux/407-building-and-running-your-own-dns-over-https-server

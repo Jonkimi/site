@@ -1,22 +1,26 @@
 ---
 title: Unity3D DevOps with Gitlab CI
 date: 2019-05-09 11:12:32
-tags: [Unity, Unity3D, CI ,GitLab]
-description: Unity 配置 GitLab CI
+tags: [Unity, Unity3D, CI ,GitLab, DevOps]
+description: 使用 GitLab CI 实现 Unity3D DevOps
 ---
 
 ## Gitlab-Runner
 
 1. 安装 Gitlab-Runner
 
+  see {% post_link Install-Gitlab-Runner %}
+
 2. 获取 License
 
-```shell
+  使用`gableroux/unity3d-gitlab-ci-example`提供的Docker镜像[^1]
 
-docker run --net host -it --rm -e "UNITY_USERNAME=your-user-name" -e "UNITY_PASSWORD=your-password" gableroux/unity3d:2017.4.10f1
+    ```shell
 
-xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity -logFile -batchmode -username "$UNITY_USERNAME" -password "$UNITY_PASSWORD"
-```
+    docker run --net host -it --rm -e "UNITY_USERNAME=your-user-name" -e "UNITY_PASSWORD=your-password" gableroux/unity3d:2017.4.10f1
+
+    xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity -logFile -batchmode -username "$UNITY_USERNAME" -password "$UNITY_PASSWORD"
+    ```
 
 3. `.gitlab-ci.yml`
 

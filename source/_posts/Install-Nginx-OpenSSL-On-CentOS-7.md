@@ -6,9 +6,7 @@ description: Compile latest version of Nginx and OpenSSL on CentOS 7
 ---
 
 
-## Install
-
-1. download source code
+##  Download source code
 
 ```shell
 # install tool
@@ -31,7 +29,8 @@ wget https://www.zlib.net/zlib-1.2.11.tar.gz && sudo tar xzvf zlib-1.2.11.tar.gz
 git clone git://github.com/arut/nginx-rtmp-module.git
 ```
 
-2. Compile
+## Compile Install
+
 ```shell
 # tool
 sudo yum install -y make gcc perl pcre-devel zlib-devel
@@ -46,7 +45,7 @@ git checkout -b OpenSSL_1_1_1d OpenSSL_1_1_1d
 
 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib
 
->zlib = enable the compression using zlib library.
+# zlib = enable the compression using zlib library.
 
 # compile openssl
 make
@@ -72,7 +71,9 @@ chmod +x /etc/profile.d/openssl.sh
 source /etc/profile.d/openssl.sh
 which openssl
 openssl version -a
+```
 
+```shell
 # nginx dependency
 yum install -y perl perl-devel perl-ExtUtils-Embed libxslt libxslt-devel libxml2 libxml2-devel gd gd-devel GeoIP GeoIP-devel
 
@@ -182,5 +183,7 @@ ExecStop=/bin/kill -s TERM $MAINPID
 WantedBy=multi-user.target
 ```
 
-[^1]: https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
-[^2]: https://www.howtoforge.com/how-to-build-nginx-from-source-on-centos-7/
+## Reference
+
+- https://www.howtoforge.com/tutorial/how-to-install-openssl-from-source-on-linux/
+- https://www.howtoforge.com/how-to-build-nginx-from-source-on-centos-7/

@@ -9,7 +9,6 @@ description: 记录 LEMP 安装
 
 2. [Nginx PHP CentOS 7][2]
 
-## Reference
 
 [1]: https://www.linode.com/docs/web-servers/lemp/lemp-stack-on-centos-7-with-fastcgi/ "CentOS 7 安装LEMP"
 [2]: https://www.svennd.be/nginx-php-fpm-centos-7/ "Nginx PHP CentOS 7"

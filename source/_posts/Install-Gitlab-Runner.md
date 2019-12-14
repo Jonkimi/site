@@ -75,7 +75,7 @@ docker run --net host -it --rm -e "UNITY_USERNAME=your-user-name" -e "UNITY_PASS
 
 > Can't mount host data directory to minio server docker container
 
-[SELinux 添加权限][3]
+[SELinux 添加权限][^3]
 
 ```bash
 cat /var/log/audit/audit.log | grep minio | grep denied | audit2allow -M minio
@@ -84,7 +84,7 @@ semodule -i minio.pp
 
 ## Reference
 
-[1]: https://gitlab.com/gitlab-org/gitlab-runner/blob/master/docs/install/linux-repository.md
-[2]: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
-[2]: https://docs.gitlab.com/runner/configuration/autoscale.html#distributed-runners-caching
-[3]: https://github.com/minio/minio/issues/6237
+- https://gitlab.com/gitlab-org/gitlab-runner/blob/master/docs/install/linux-repository.md
+- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
+- https://docs.gitlab.com/runner/configuration/autoscale.html#distributed-runners-caching
+- https://github.com/minio/minio/issues/6237
