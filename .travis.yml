@@ -32,4 +32,4 @@ deploy:
   on:
     branch: hexo
   repo: jonkimi/jonkimi.github.io
-  target_branch: develop
+  target_branch: master
