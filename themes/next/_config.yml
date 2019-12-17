@@ -592,8 +592,8 @@ comments:
 
 # Disqus
 disqus:
-  enable: false
-  shortname:
+  enable: true
+  shortname: Jonkimi
   count: true
   lazyload: false
   #post_meta_order: 0
