@@ -1,7 +1,7 @@
 ---
-title: Language-Server-Protocol
+title: Language Server Protocol
 tags: [LSP, ccls, Bear]
-description: Language-Server-Protocol
+description: Language Server Protocol
 date: 2019-12-11 16:17:59
 ---
 

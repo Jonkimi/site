@@ -1,5 +1,5 @@
 ---
-title: Read-Source-Code-With-Sourcetrail
+title: Read Source Code With Sourcetrail
 tags: [Sourcetrail, Compilation Database, Bear]
 description: Generate compilation database by Bear, and  sourcetrail 
 date: 2019-12-13 13:43:50
@@ -43,7 +43,7 @@ more details can be found here: https://www.sourcetrail.com/documentation/#Creat
     Use `Bear`, see {% post_link Language-Server-Protocol %}
 
 
-# Reference
+## Reference
 
 - https://www.sourcetrail.com
 - https://www.jetbrains.com/help/clion/compilation-database.html#compdb_generate
