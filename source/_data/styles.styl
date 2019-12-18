@@ -1,0 +1,208 @@
+// https://zenreal.github.io/posts/44730/#blog%E6%96%87%E7%AB%A0%E5%8D%80%E5%A1%8A%E9%80%8F%E6%98%8E%E5%8C%96
+ body {  
+ background-image:url(https://source.unsplash.com/random/1600x900);
+ background-repeat: no-repeat;
+ background-attachment:fixed;
+ background-position:50% 50%;
+}
+
+.content-wrap {
+    background: initial;
+    box-shadow: initial;
+    padding: initial
+}
+
+.content {
+    background: initial;
+}
+
+.posts-expand  {
+    background: initial;
+    padding-top: 0;
+}
+
+.btn {
+    background:#555
+    border:none;
+    color:#fff;
+}
+
+// page-opacity
+
+.post-block {
+    background: #fff;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.06),0 1px 5px 0 rgba(0,0,0,.12);
+    padding: 40px
+    background: rgba(255, 255, 255, 0.85);
+}
+
+div>div article + article.post-block  {
+    border-radius: 16px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.06),0 1px 5px 0 rgba(0,0,0,.12),0 -1px .5px 0 rgba(0,0,0,.09);
+    margin-top: 12px;
+}
+
+.sidebar { //文章目錄&本站概要區塊透明
+  opacity: 0.85;
+}
+
+.header-inner { //標題+分頁處區塊透明
+  background: rgba(255,255,255,0.85);
+}
+
+.pagination { //底部換頁處透明
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 16px;
+    border-top: initial;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.06),0 1px 5px 0 rgba(0,0,0,.12),0 -1px .5px 0 rgba(0,0,0,.09);
+    margin: 12px 0 0;
+    padding: 10px 0 10px
+}
+
+.popup { //搜尋透明
+  opacity: 0.9;
+}
+
+.comments { //評論區透明
+    background: rgba(255, 255, 255, 0.85);
+    margin: 60px 0 0 0;
+    padding: 16px;
+}
+
+
+// note
+
+//自定義NOTE
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-success {
+    color: #468847;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+}
+.alert-info {
+    color: #3a87ad;
+    background-color: #e2eaee;
+    border-color: #c5d5dd;
+}
+.alert-warning {
+    color: #c09853;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+.alert-danger {
+    color: #b94a48;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+.post-body .note {
+  position: relative;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: initial;
+  border-left: 3px solid #eee;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+.post-body .note h2,
+.post-body .note h3,
+.post-body .note h4,
+.post-body .note h5,
+.post-body .note h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  border-bottom: initial;
+  padding-top: 0 ;
+}
+.post-body .note p:first-child,
+.post-body .note ul:first-child,
+.post-body .note ol:first-child,
+.post-body .note table:first-child,
+.post-body .note pre:first-child,
+.post-body .note blockquote:first-child {
+  margin-top: 0;
+}
+.post-body .note p:last-child,
+.post-body .note ul:last-child,
+.post-body .note ol:last-child,
+.post-body .note table:last-child,
+.post-body .note pre:last-child,
+.post-body .note blockquote:last-child {
+  margin-bottom: 0;
+}
+.post-body .note.default {
+  background-color: #f7f7f7;
+  border-left-color: #777;
+}
+.post-body .note.default h2,
+.post-body .note.default h3,
+.post-body .note.default h4,
+.post-body .note.default h5,
+.post-body .note.default h6 {
+  color: #777;
+}
+.post-body .note.primary {
+  background-color: #f5f0fa;
+  border-left-color: #6f42c1;
+}
+.post-body .note.primary h2,
+.post-body .note.primary h3,
+.post-body .note.primary h4,
+.post-body .note.primary h5,
+.post-body .note.primary h6 {
+  color: #6f42c1;
+}
+.post-body .note.info {
+  background-color: #eef7fa;
+  border-left-color: #428bca;
+}
+.post-body .note.info h2,
+.post-body .note.info h3,
+.post-body .note.info h4,
+.post-body .note.info h5,
+.post-body .note.info h6 {
+  color: #428bca;
+}
+.post-body .note.success {
+  background-color: #eff8f0;
+  border-left-color: #5cb85c;
+}
+.post-body .note.success h2,
+.post-body .note.success h3,
+.post-body .note.success h4,
+.post-body .note.success h5,
+.post-body .note.success h6 {
+  color: #5cb85c;
+}
+.post-body .note.warning {
+  background-color: #fdf8ea;
+  border-left-color: #f0ad4e;
+}
+.post-body .note.warning h2,
+.post-body .note.warning h3,
+.post-body .note.warning h4,
+.post-body .note.warning h5,
+.post-body .note.warning h6 {
+  color: #f0ad4e;
+}
+.post-body .note.danger {
+  background-color: #fcf1f2;
+  border-left-color: #d9534f;
+}
+.post-body .note.danger h2,
+.post-body .note.danger h3,
+.post-body .note.danger h4,
+.post-body .note.danger h5,
+.post-body .note.danger h6 {
+  color: #d9534f;
+}
+
+
+
+// mac panel
