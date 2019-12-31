@@ -10,7 +10,7 @@ description: Install oh-my-zsh with fzf and z
 ```shell
 brew install zsh
 ```
-TabNine::config
+
 CentOS
 ```shell
 sudo yum update && sudo yum -y install zsh
