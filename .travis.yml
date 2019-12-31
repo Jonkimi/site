@@ -18,7 +18,7 @@ addons:
 before_script:
  - git config --global user.name "Jonkimi"
  - git config --global user.email "JonkimyLiao@gmail.com"
- - git clone -b master https://github.com/Jonkimi/jonkimi.github.io.git .deploy_git
+ - git clone https://github.com/Jonkimi/jonkimi.github.io.git public
 
 script:
   - hexo generate
