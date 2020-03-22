@@ -11,7 +11,7 @@
     "deploy": "hexo deploy"
   },
   "dependencies": {
-    "hexo": "^4.1.1",
+    "hexo": "^4.2.0",
     "hexo-asset-image": "github:jonkimi/hexo-asset-image#master",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-flowchart": "^1.0.4",
@@ -25,10 +25,10 @@
     "hexo-renderer-markdown-it-plus": "^1.0.4",
     "hexo-renderer-stylus": "^1.1.0",
     "hexo-server": "^1.0.0",
-    "npm-check-updates": "^4.0.1"
+    "npm-check-updates": "^4.0.4"
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-config-hexo": "^4.1.0"
   }
 }
