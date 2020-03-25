@@ -9,7 +9,7 @@ description: 安装 dnscrypt-proxy 加密 DNS 请求
 
 ## 在 Linux 加密 DNS
 
-下载 [Linux 64位安装包][2]，解压到指定目录
+下载 [Linux 64 位安装包][2]，解压到指定目录
 
 ```shell
 wget https://github.com/jedisct1/dnscrypt-proxy/releases/download/2.0.16/dnscrypt-proxy-linux_x86_64-2.0.16.tar.gz
@@ -84,7 +84,6 @@ prefix = ""
 
 `/etc/systemd/system/dnscrypt-proxy.service`
 
-
 ```ini
 [Unit]
 Description=Encrypted/authenticated DNS proxy
@@ -108,7 +107,7 @@ EnvironmentFile=-/etc/sysconfig/dnscrypt-proxy
 WantedBy=multi-user.target
 ```
 
-关闭系统分配DNS
+关闭系统分配 DNS
 
 ```shell
 systemctl disable NetworkManager.service
@@ -172,18 +171,23 @@ cat << EOM > /etc/nginx/conf.d/doh.conf
           location / {
               return 404;
           }
-  
-  
+
+
   }
-  EOM  
+  EOM
 ```
-
-
 
 ## 在 Winwos 上加密 DNS
 
 下载 [Simple DNSCrypt][3] 安装后修改系统 DNS 地址。
 
+## 在 Ubuntu 上修改 DNS
+
+```shell
+sudo vi /etc/resolvconf/resolv.conf.d/base
+sudo resolvconf -u
+cat /etc/resolv.conf
+```
 
 ## 参考
 
