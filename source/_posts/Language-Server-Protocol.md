@@ -42,6 +42,7 @@ function! BuildTABNine(info)
 endfunction
 Plug 'zxqfl/tabnine-vim', { 'do': function('BuildTABNine') }
 ```
+
 use command `:PlugInstall` Install tabnine-vim
 
 modify `TabNine.toml`
@@ -75,11 +76,12 @@ make install
 
 make sure `libear.so` in `LD_LIBRARY_PATH`
 
->ERROR: ld.so: object '/lib/x86_64-linux-gnu/libear.so' from LD_PRELOAD cannot be preloaded (wrong ELF class: ELFCLASS64): ignored. 
+> ERROR: ld.so: object '/lib/x86_64-linux-gnu/libear.so' from LD_PRELOAD cannot be preloaded (wrong ELF class: ELFCLASS64): ignored.
 
-`libear.so` copy 32-bit library to `/usr/lib/i386-linux-gnu/` then copy 64-bit library to `/usr/lib/x86_64-linux-gnu/`.[^6]
+`libear.so` copy 32-bit library to `/usr/lib/i386-linux-gnu/` or `/usr/lib32` then copy 64-bit library to `/usr/lib/x86_64-linux-gnu/`.[^6]
 Execute bear this way and get Compilation Database json:
-```shell 
+
+```shell
 bear -l libear.so make_cmd
 ```
 

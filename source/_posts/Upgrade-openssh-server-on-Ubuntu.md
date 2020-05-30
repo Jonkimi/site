@@ -23,20 +23,26 @@ tar zxf openssh-8.2p1.tar.gz
 ## Installation
 
 ```
+sudo apt install libssl-dev
+sudo apt install libpam-dev
+sudo apt install libz-dev
 ./configure --prefix=/usr --sysconfdir=/etc/ssh --with-md5-passwords --with-pam --with-privsep-path=/var/lib/sshd
 make -j8
 sudo make install
 
-chown 600 /etc/ssh/*key
+sudo chown 600 /etc/ssh/*key
 chmod 600 ~/.ssh/authorized_keys
-chmod 600 ~/.ssh/config
 ```
 
 ## Problem
 
 > Job for ssh.service failed because a timeout was exceeded
 
-add code before calling `server_accept_loop`
+```
+apt-get install libsystemd-dev
+```
+
+add code in `sshd.c` before calling `server_accept_loop`
 
 ```cpp
 #include <systemd/sd-daemon.h>
@@ -48,6 +54,12 @@ add code before calling `server_accept_loop`
     server_accept_loop(&sock_in, &sock_out,
                     &newsock, config_s);
 ...
+```
+
+Makefile
+
+```
+LIBS=-lcrypto -ldl -lutil -lz  -lcrypt -lresolv -lsystemd
 ```
 
 ## Reference
