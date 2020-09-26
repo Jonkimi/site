@@ -21,9 +21,7 @@ sudo apt-get install \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 sudo add-apt-repository \
-   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
-   $(lsb_release -cs) \
-   stable"
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -73,7 +71,6 @@ nginx nginx.conf `common/config/nginx/nginx.conf`
 # proxy_set_header X-Forwarded-Proto $scheme;
 ```
 
-
 4. nginx configuration
 
 ```conf
@@ -115,7 +112,6 @@ docker logout [server]
 docker tag SOURCE_IMAGE[:TAG] example.com/project/IMAGE[:TAG]
 docker push example.com/project/IMAGE[:TAG]
 ```
-
 
 ## Reference
 
